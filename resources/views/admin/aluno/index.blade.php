@@ -164,10 +164,14 @@
                 console.log(resposta);
                 $("#detalhes-nome").val(resposta.nome);
                 $("#detalhes-descricao").val(resposta.descricao);
-                $("#detalhes-contratado").val(resposta.contratado || 0);
-                $("#detalhes-formado").val(resposta.formado || 0);
+                $("#detalhes-contratado").val(resposta.contratado);
+                $("#detalhes-formado").val(resposta.formado);
                 $("#detalhes-curso").val(resposta.curso.curso);
                 $("#detalhes-imagem").attr('src', '' + resposta.imagem);
+                const statuscontratado = (resposta.contratado) ? "Sim" : 'Nao';
+                $("#contratado-status").text(statuscontratado);
+                const statusformado = (resposta.formado) ? "Sim" : 'Nao';
+                $("#formado-status").text(statusformado);
             });
         })
         /* js para abrir Modal de excluir de forma dinâmica */

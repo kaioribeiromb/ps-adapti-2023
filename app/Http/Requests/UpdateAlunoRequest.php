@@ -24,10 +24,10 @@ class UpdateAlunoRequest extends FormRequest
     public function rules()
     {
         return [
-          'nome' => ['required', 'string'],
+          'nome' => ['required', 'string', 'max:100'],
           'descricao' => ['max:3000'],
-          'contratado' => ['nullable','bool'],
-          'formado'=> ['nullable','bool'],
+          'contratado' => ['nullable','boolean'],
+          'formado'=> ['nullable','boolean'],
           'curso_id' => ['required'],
           'imagem' => ['image'],
         ];

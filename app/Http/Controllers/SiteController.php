@@ -19,7 +19,7 @@ class SiteController extends Controller
     {
         $alunos = $this->alunos->all();
         $cursos = $this->cursos->all();
-        return view('site.index', compact('cursos', 'alunos'));
+        return view('site.index', compact('alunos','cursos'));
     }
 
 

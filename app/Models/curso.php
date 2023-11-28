@@ -14,6 +14,6 @@ class curso extends Model
     ];
 
     public function cursos() {
-        return $this->hasMany(Curso::class);
+        return $this->hasMany(curso::class);
     }
 }

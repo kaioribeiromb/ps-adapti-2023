@@ -40,16 +40,17 @@
                         <div class="titulo-card">Não Formado</div>
                     @endif
                         <div class="titulo-card">{{ $aluno->descricao }}</div>
-                        @if ($aluno->contratado == "1")
-                            <button class="contratado" name="contratar">
+                        @if ($aluno->contratado)
+                            <button class="contratado" name="contratar" type="submit">
                             <p>CONTRATADO</p>
                             </button>
                         @else
                             <form action="{{ route('aluno.contratar', $aluno) }}" method="post">
                             @csrf
-                            <button class="contratar" name="contratar">
+                            <button class="contratar" name="contratar" type="submit">
                             <p>CONTRATAR</p>
                             </button>
+                            </form>
                         @endif
                 </div>
             @endforeach
