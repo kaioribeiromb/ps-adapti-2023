@@ -34,9 +34,24 @@
 <div class="row">
     <label class="col-sm-2 col-form-label">{{ __('Está contratado?') }}</label>
     <div>
-        <input type="checkbox" id="estáFormado" name="contratado" value="1" data-expected-info="contratado"
-            class="form-control @error('contratado') is-invalid @enderror" required>
+        <input type="checkbox" id="contratado" name="contratado" value="1" data-expected-info="contratado"
+            class="form-control @error('contratado') is-invalid @enderror">
         @error('contratado')
+            <span class="invalid-feedback" role="alert">
+                <i class="fi-circle-cross"></i><strong> {{ $message }}</strong>
+            </span>
+        @enderror
+    </div>
+</div>
+
+{{-- Está formado? --}}
+
+<div class="row">
+    <label class="col-sm-2 col-form-label">{{ __('Está formado?') }}</label>
+    <div>
+        <input type="checkbox" id="formado" name="formado" value="1" data-expected-info="formado"
+            class="form-control @error('formado') is-invalid @enderror">
+        @error('formado')
             <span class="invalid-feedback" role="alert">
                 <i class="fi-circle-cross"></i><strong> {{ $message }}</strong>
             </span>

@@ -1,0 +1,187 @@
+:root {
+    --background-light: #d9d9d9;
+    --background-dark: #202124;
+}
+
+[data-theme="dark"] {
+    --background-light: #202124;
+    --background-dark: #d9d9d9;
+}
+
+body {
+    margin: 0;
+    font-family: "Arvo";
+    background-color: var(--background-light);
+    transition: 0.15s linear;
+}
+
+#cabecalho {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 9rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 25px;
+}
+
+#cabecalho nav {
+    display: flex;
+    align-items: center;
+    gap: 9rem;
+}
+
+.Logo {
+    display: flex;
+    padding: 1rem;
+}
+
+#coruja {
+    width: 3.3rem;
+}
+
+#btn-dark {
+    padding: 0;
+    cursor: pointer;
+    margin-top: 0.2rem;
+    margin-left: 2rem;
+    background-color: transparent;
+    border: none;
+}
+
+#cabecalho a {
+    text-decoration: none;
+    color: #960ab3;
+    cursor: pointer;
+}
+
+#cabecalho h1 {
+    margin: 0;
+    padding: 1.5rem 1rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(180deg, #960ab3 0%, #c30bd0 100%);
+}
+
+#cabecalho h2 {
+    margin-top: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Montsserrat";
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.card {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column; /* muda o eixo principal */
+    gap: 1.5rem;
+    align-items: center;
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.41);
+    border: #c30bd0 solid 2px;
+    color: #960ab3;
+    font-size: 1.5rem;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.titulo-card {
+    text-align: center;
+}
+
+.card img {
+    width: 70%;
+    aspect-ratio: 1/1; /* proporção da imagem */
+    object-fit: cover; /* ajusta a ikmagem ao tamanho dado a ela. obs: corta a imagem*/
+    border: #c30bd0 solid 2px;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap; /* quebra de linha */
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+
+.contratar {
+    margin: 0.5rem 0;
+    background-color: #960ab3;
+    padding: 15px 20px;
+    border: #960ab3 solid 2px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.contratar p {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.contratar:hover {
+    background-color: #c30bd0;
+    transition: 0.3s;
+}
+
+.contratado {
+    margin: 0.5rem 0;
+    background-color: transparent;
+    padding: 15px 14px;
+    border: #c30bd0 solid 2px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    cursor: pointer;
+}
+
+.contratado p {
+    margin: 0;
+    color: #c30bd0;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+#btn-dark {
+    margin: 0 0 0 5px;
+}
+
+footer {
+    display: flex;
+    margin-top: 25px;
+    border-top: #c30bd0 solid 1px;
+    width: auto;
+    height: 5rem;
+    align-items: center;
+    font-size: 1rem;
+    justify-content: center;
+    padding-top: 1rem;
+    color: #960ab3;
+}
+
+@media (max-width: 768px) {
+    /* responsividade */
+    #cabecalho,
+    #cabecalho nav {
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 390px) {
+    /* responsividade */
+    footer {
+        font-size: 0.8rem;
+    }
+}

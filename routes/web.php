@@ -21,6 +21,7 @@ use App\Http\Controllers\AlunoController;
 |
 */
 
+Route::post('/contratar/{aluno}', 'App\Http\Controllers\AlunoController@contratar')->name('aluno.contratar');
 Route::middleware('locale')->group(function () {
 
     Route::put('/locale', [LocaleController::class, 'setLocale'])->name('locale');
@@ -43,8 +44,8 @@ Route::middleware('locale')->group(function () {
         Route::resource('user', UserController::class, ['except' => ['show']]);
         Route::resource('curso', CursoController::class, ['except' => ['show']]);
         Route::resource('aluno', AlunoController::class);
-
-
+        
+        
         //Rotas para perfil do usuário
         Route::controller(ProfileController::class)->name('profile.')->group(function () {
             Route::get('profile', 'edit')->name('edit');
@@ -52,7 +53,7 @@ Route::middleware('locale')->group(function () {
             Route::put('profile/password', 'password')->name('password');
         });
     });
-
+    
     Route::get('/', [SiteController::class, 'index'])->name('site');
 
 });
